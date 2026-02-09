@@ -1,30 +1,92 @@
-# Online payment Fraud Detection Using Machine Learning
+💳 Financial Transaction Fraud Detection Using Machine Learning
 
-This project applies machine learning techniques to detect fraudulent transactions within a financial dataset. The model achieves an impressive accuracy of **99.97%**.
+This project develops a machine learning–based fraud detection system designed to identify high-risk financial transactions using behavioral and balance-based transaction data. The goal is to improve fraud detection sensitivity while minimizing false positives in real-world financial operations.
 
-## Dataset
-The dataset contains the following features:
-- **step**: Time unit of the transaction.
-- **type**: Transaction type (e.g., CASH_OUT, PAYMENT).
-- **amount**: Transaction amount.
-- **oldbalanceOrg/newbalanceOrg**: Sender's balances before and after the transaction.
-- **oldbalanceDest/newbalanceDest**: Receiver's balances before and after the transaction.
-- **isFraud**: Indicator of fraud (1 for fraud, 0 otherwise).
-- **isFlaggedFraud**: Indicator if the transaction was flagged as fraud.
+📊 Dataset
 
-## Steps
-1. **Data Preprocessing**: Cleaned the data and mapped transaction types to numeric values.
-2. **Feature Engineering**: Derived meaningful features for better prediction.
-3. **Modeling**: Used a machine learning model to predict fraud.
+The dataset contains transactional and behavioral features including:
 
-## Results
-- **Accuracy**: 99.97%
+step – Time index of transaction
 
-## Tools
-- **Python**: pandas, sklearn, seaborn, matplotlib.
+type – Transaction category (CASH_OUT, PAYMENT, TRANSFER)
 
-## Conclusion
-The project demonstrates the potential of machine learning in detecting fraudulent transactions effectively.
+amount – Transaction value
 
-Feel free to check out the full code in this repository and share your feedback!
+oldbalanceOrg, newbalanceOrg – Sender balances
 
+oldbalanceDest, newbalanceDest – Receiver balances
+
+isFraud – Fraud label
+
+isFlaggedFraud – System fraud flag indicator
+
+⚙️ Methodology
+Data Preprocessing
+
+Handled missing values and inconsistent records
+
+Encoded categorical transaction types
+
+Performed exploratory data analysis to understand fraud patterns
+
+Feature Engineering
+
+Balance change ratios
+
+Transaction behavior indicators
+
+Derived risk-based transaction features
+
+Modeling
+
+Built supervised classification models
+
+Compared multiple algorithms (e.g., Random Forest, Logistic Regression)
+
+Addressed class imbalance using weighted learning / resampling strategies
+
+Evaluation Metrics
+
+Fraud detection performance evaluated using:
+
+Precision
+
+Recall
+
+F1-score
+
+ROC-AUC
+
+Confusion Matrix
+
+(Accuracy reported only as supplementary metric)
+
+📈 Results
+
+Achieved strong fraud detection performance with high recall on fraudulent transactions
+
+Reduced false negatives, improving early fraud identification capability
+
+Built an end-to-end ML pipeline ready for production integration
+
+🛠️ Tools & Technologies
+
+Python
+
+Pandas
+
+Scikit-learn
+
+Matplotlib
+
+Seaborn
+
+🚀 Future Improvements
+
+ROC curve visualization
+
+Threshold optimization
+
+Model explainability (SHAP / Feature Importance)
+
+API deployment for real-time fraud scoring
